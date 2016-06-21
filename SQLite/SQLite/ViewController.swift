@@ -12,14 +12,67 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        let p = Person(dict:["name" : "yuliang" , "age" : 100])
+        print(p.insertPerson())
+        print(p.updatePerson("zhangli"))
+        //        print(p.deletePerson())
+        //        let models = Person.loadPersons()
+        //        print(models)
+        //        p.insertQueuePerson()
+    }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
