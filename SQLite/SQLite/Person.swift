@@ -32,6 +32,15 @@ class Person: NSObject {
         }
     }
     
+    class func loadPersons() -> [Person]{
+        let sql = "SELECT * FROM T_Person;"
+        let res = SQLiteManager.shareManager().execRecordSQL(sql)
+        var models = [Person]()
+        for dict in res {
+            models.append(Person(dict:dict))
+        }
+        return models
+    }
     
     /**
      删除记录
